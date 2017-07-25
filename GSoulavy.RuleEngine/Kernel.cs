@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace GSoulavy.RuleEngine
 {
-   public class Kernel
+   public class Kernel : IKernel
    {
       private readonly ICollection<(string Key, string Value)> _rules;
 
