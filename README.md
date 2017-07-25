@@ -42,7 +42,7 @@ var result = ruleEngine.ValidateAll(p);
 // result = false
 
 // Only validate against rules with the matching key
-ruleEngine.AddRule("1", expression);
+var result = ruleEngine.ValidateAll(p, "1");
 // result = true
 ~~~
 
