@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSoulavy.RuleEngine", "GSou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GSoulavy.RuleEngine.Tests", "GSoulavy.RuleEngine.Tests\GSoulavy.RuleEngine.Tests.csproj", "{C17860A9-5E73-431F-9C1B-0AF2FE922891}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5951A6C1-6995-4F32-935C-E6AA1F6D8252}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
