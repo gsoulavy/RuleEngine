@@ -4,6 +4,7 @@ using Xunit;
 namespace GSoulavy.RuleEngine.Tests.Kernel
 {
    using RuleEngine;
+
    public class EvaluateTests
    {
       [Fact(DisplayName = "Evaluate: true")]
