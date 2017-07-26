@@ -10,19 +10,19 @@ This simple rule engine is a .NET Standard library 1.4, which uses Microsoft's D
 
 The IKernel interface is implemented with Kerner in order to support Inverson Of Control.
 
-~~~.language-csharp
+~~~.language-c#
 IKernel ruleEngine = new Kernel();
 ~~~
 
 ##### Simple Validation
 String expressions can be simply against the object passed to the engine.<br/>
 Creating the object:
-~~~.language-csharp
+~~~.language-c#
 var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
 ~~~
 
 Validating the object:
-~~~.language-csharp
+~~~.language-c#
 const string expression = @"(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
 var result = ruleEngine.Validate(p, expression);
 // result = false
@@ -30,7 +30,7 @@ var result = ruleEngine.Validate(p, expression);
 
 ##### Validate All
 More than one expreession can be added to the engine
-~~~.language-csharp
+~~~.language-c#
 const string expression1 = @"(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2";
 const string expression2 = @"(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
 
