@@ -50,3 +50,12 @@ var result = ruleEngine.ValidateAll(p, "1");
 
 ##### Validate Any
 The calls are the same as the case of validate all, however it returns true if any case is true.
+```cs
+// Validate against all rules when no key passed
+var result = ruleEngine.ValidateAny(p);
+// result = true
+
+// Only validate against rules with the matching key
+var result = ruleEngine.ValidateAny(p, "1");
+// result = true
+```
