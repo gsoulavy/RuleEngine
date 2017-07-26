@@ -42,8 +42,7 @@ var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
 
 Validating the object:
 ```cs
-const string expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
-var result = ruleEngine.Validate(p, expression);
+var result = ruleEngine.Validate(p, "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5");
 // result = false
 ```
 
