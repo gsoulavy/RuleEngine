@@ -16,6 +16,23 @@ The IKernel interface is implemented with Kerner in order to support Inverson Of
 IKernel ruleEngine = new Kernel();
 ```
 
+##### Role of the IRule
+The engine is designed to use any object as a rule which implements IRule interface in order to make it easy to use with an ORM.
+
+```cs
+public interface IRule
+{
+    string Key { get; set; }
+    string Expression { get; set; }
+}
+```
+```cs
+//...
+void AddRule(IRule rule);
+//...
+```
+
+
 ##### Simple Validation
 String expressions can be simply against the object passed to the engine.<br/>
 Creating the object:
@@ -35,8 +52,8 @@ More than one expreession can be added to the engine
 ```cs
 var rules = new List<Rule>
 {
-	new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-	new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+    new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
+    new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
 };
 
 ruleEngine.AddRules(rules);
@@ -55,8 +72,8 @@ The calls are the same as the case of validate all, however it returns true if a
 ```cs
 var rules = new List<Rule>
 {
-	new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-	new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+    new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
+    new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
 };
 
 ruleEngine.AddRules(rules);
