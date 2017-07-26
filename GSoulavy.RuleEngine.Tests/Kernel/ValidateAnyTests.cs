@@ -12,8 +12,8 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
          // Arrange
          var rules = new List<Rule>
          {
-            new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-            new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+            new Rule {Key = "1", Expression = "(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2"},
+            new Rule {Key = "2", Expression = "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5"}
          };
          var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
          var ruleEngine = new RuleEngine.Kernel();
@@ -30,8 +30,8 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
          // Arrange
          var rules = new List<Rule>
          {
-            new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-            new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+            new Rule {Key = "1", Expression = "(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2"},
+            new Rule {Key = "2", Expression = "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5"}
          };
          var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
          var ruleEngine = new RuleEngine.Kernel();
@@ -48,8 +48,8 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
          // Arrange
          var rules = new List<Rule>
          {
-            new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-            new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+            new Rule {Key = "1", Expression = "(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2"},
+            new Rule {Key = "2", Expression = "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5"}
          };
          var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
          var ruleEngine = new RuleEngine.Kernel();

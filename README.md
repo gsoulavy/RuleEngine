@@ -33,14 +33,14 @@ void AddRule(IRule rule);
 
 ##### Simple Validation
 String expressions can be simply against the object passed to the engine.<br/>
-Creating the object:
+Creating a fact:
 ```cs
-var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
+var fact = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
 ```
 
-Validating the object:
+Validating the fact:
 ```cs
-var result = ruleEngine.Validate(p, "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5");
+var result = ruleEngine.Validate(fact, "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5");
 // result = false
 ```
 
@@ -49,18 +49,18 @@ More than one expreession can be added to the engine
 ```cs
 var rules = new List<Rule>
 {
-    new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-    new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+    new Rule {Key = "1", Expression = "(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2"},
+    new Rule {Key = "2", Expression = "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5"}
 };
 
 ruleEngine.AddRules(rules);
 
 // Validate against all rules when no key passed
-var result = ruleEngine.ValidateAll(p);
+var result = ruleEngine.ValidateAll(f);
 // result = false
 
 // Only validate against rules with the matching key
-var result = ruleEngine.ValidateAll(p, "1");
+var result = ruleEngine.ValidateAll(f, "1");
 // result = true
 ```
 
@@ -69,17 +69,17 @@ The calls are the same as the case of validate all, however it returns true if a
 ```cs
 var rules = new List<Rule>
 {
-    new Rule {Key = "1", Expression = "(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2"},
-    new Rule {Key = "2", Expression = "(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5"}
+    new Rule {Key = "1", Expression = "(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2"},
+    new Rule {Key = "2", Expression = "(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5"}
 };
 
 ruleEngine.AddRules(rules);
 
 // Validate against all rules when no key passed
-var result = ruleEngine.ValidateAny(p);
+var result = ruleEngine.ValidateAny(f);
 // result = true
 
 // Only validate against rules with the matching key
-var result = ruleEngine.ValidateAny(p, "1");
+var result = ruleEngine.ValidateAny(f, "1");
 // result = true
 ```

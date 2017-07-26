@@ -9,7 +9,7 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
       public void Evaluate_False()
       {
          // Arrange
-         const string expression = @"(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
+         const string expression = @"(f.Age > 3 && f.Income > 100000) || f.NumberOfChildren > 5";
          var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
          var ruleEngine = new RuleEngine.Kernel();
          // Act
@@ -22,7 +22,7 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
       public void Evaluate_True()
       {
          // Arrange
-         const string expression = @"(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2";
+         const string expression = @"(f.Age > 3 && f.Income < 50000) || f.NumberOfChildren > 2";
          var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
          var ruleEngine = new RuleEngine.Kernel();
          // Act

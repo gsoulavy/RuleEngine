@@ -9,8 +9,8 @@ namespace GSoulavy.RuleEngine
       void AddRules(IEnumerable<IRule> rules);
       void RemoveRule(IRule rule);
       void RemoveRules(IEnumerable<IRule> rules);
-      bool Validate<T>(T obj, string rule);
-      bool ValidateAll<T>(T obj, string key = null);
-      bool ValidateAny<T>(T obj, string key = null);
+      bool Validate<T>(T fact, string rule);
+      bool ValidateAll<T>(T fact, string key = null);
+      bool ValidateAny<T>(T fact, string key = null);
    }
 }

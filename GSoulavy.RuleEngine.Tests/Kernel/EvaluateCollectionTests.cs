@@ -17,7 +17,7 @@ namespace GSoulavy.RuleEngine.Tests.Kernel
             new Person {Name = "Mary", Gender = Gender.Female, Age = 22, Income = 23000, NumberOfChildren = 1}
          };
 
-         const string expression = "o.Any(p => p.Name.Equals(\"John\") && p.Age < 24)";
+         const string expression = "f.Any(p => p.Name.Equals(\"John\") && p.Age < 24)";
          var ruleEngine = new Kernel();
          // Act
          var result = ruleEngine.Evaluate<IEnumerable<Person>, bool>(people, expression);
