@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="/highlight/styles/default.css">
-<script src="/highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 # RuleEngine
 
@@ -14,9 +12,9 @@ This simple rule engine is a .NET Standard library 1.4, which uses Microsoft's D
 
 The IKernel interface is implemented with Kerner in order to support Inverson Of Control.
 
-<pre><code class='language-cs'>
+```cs
 IKernel ruleEngine = new Kernel();
-</code></pre>
+```
 
 ##### Simple Validation
 String expressions can be simply against the object passed to the engine.<br/>
@@ -26,15 +24,15 @@ var p = new Person {Age = 37, Income = 45000, NumberOfChildren = 3};
 ```
 
 Validating the object:
-~~~.language-c#
+```cs
 const string expression = @"(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
 var result = ruleEngine.Validate(p, expression);
 // result = false
-~~~
+```
 
 ##### Validate All
 More than one expreession can be added to the engine
-~~~.language-c#
+```cs
 const string expression1 = @"(o.Age > 3 && o.Income < 50000) || o.NumberOfChildren > 2";
 const string expression2 = @"(o.Age > 3 && o.Income > 100000) || o.NumberOfChildren > 5";
 
@@ -48,7 +46,7 @@ var result = ruleEngine.ValidateAll(p);
 // Only validate against rules with the matching key
 var result = ruleEngine.ValidateAll(p, "1");
 // result = true
-~~~
+```
 
 ##### Validate Any
 The calls are the same as the case of validate all, however it returns true if any case is true.
