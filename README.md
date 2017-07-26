@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/highlight/styles/default.css">
-
 # RuleEngine
 
 ### Purpose
