@@ -2,7 +2,7 @@
 
 ### Purpose
 
-This simple rule engine is a .NET Standard library 1.4, which uses Microsoft's DLR DynamicExpressionParser in the background. The goal was to make a simple engine which is easy to use and compatible with many projects.
+This simple rule engine is a .NET Standard library 2.0, which uses Microsoft's DLR DynamicExpressionParser in the background. The goal was to make a simple engine which is easy to use and compatible with many projects.
 
 ### Use
 
