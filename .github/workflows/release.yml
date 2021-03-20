@@ -1,0 +1,29 @@
+name: Release to Nuget
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Create NuGet Package
+      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/RuleEngine/releases/releases/tag/${{ github.event.release.tag_name }}"
+    - name: Archive NuGet Package
+      uses: actions/upload-artifact@v1
+      with:
+        name: RuleEngine
+        path: ./GSoulavy.RuleEngine/bin/Release/GSoulavy.RuleEngine.${{ github.event.release.tag_name }}.nupkg
+        
+    - name: Publish NuGet Package
+      run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
