@@ -1,5 +1,5 @@
 # RuleEngine
-[![.NET](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml)
+[![.NET](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml) [![Release to Nuget](https://github.com/gsoulavy/RuleEngine/actions/workflows/release.yml/badge.svg)](https://github.com/gsoulavy/RuleEngine/actions/workflows/release.yml) ![Nuget](https://img.shields.io/nuget/v/GSoulavy.RuleEngine)
 
 ### Purpose
 
