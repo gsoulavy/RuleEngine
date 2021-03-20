@@ -18,7 +18,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Create NuGet Package
-      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/RuleEngine/releases/releases/tag/${{ github.event.release.tag_name }}"
+      run: dotnet pack -c Release /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/gsoulavy/RuleEngine/releases/tag/${{ github.event.release.tag_name }}"
     - name: Archive NuGet Package
       uses: actions/upload-artifact@v1
       with:
