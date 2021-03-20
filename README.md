@@ -1,4 +1,5 @@
 # RuleEngine
+[![.NET](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml/badge.svg)](https://github.com/gsoulavy/RuleEngine/actions/workflows/ci.yml)
 
 ### Purpose
 
