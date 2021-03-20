@@ -6,7 +6,7 @@
     <Company></Company>
     <Description>This simple rule engine is a .NET Standard library 2.0, which uses Microsoft's DLR DynamicExpressionParser in the background. The goal was to make a simple engine which is easy to use and compatible with many projects.</Description>
     <Copyright>Gab Soulavy</Copyright>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageLicense>https://opensource.org/licenses/MIT</PackageLicense>
     <PackageProjectUrl>https://github.com/gsoulavy/RuleEngine</PackageProjectUrl>
     <RepositoryUrl>https://github.com/gsoulavy/RuleEngine</RepositoryUrl>
     <RepositoryType>https://github.com/gsoulavy/RuleEngine.git</RepositoryType>
