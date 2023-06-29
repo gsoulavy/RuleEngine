@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Gab Soulavy</Authors>
-    <Company></Company>
+    <Company>Gab Soulavy</Company>
     <Description>This simple rule engine is a .NET Standard library 2.0, which uses Microsoft's DLR DynamicExpressionParser in the background. The goal was to make a simple engine which is easy to use and compatible with many projects.</Description>
     <Copyright>Gab Soulavy</Copyright>
     <PackageLicense>https://opensource.org/licenses/MIT</PackageLicense>
@@ -12,6 +12,7 @@
     <RepositoryType>https://github.com/gsoulavy/RuleEngine.git</RepositoryType>
     <PackageTags>Rules Engine dotnet standard dynamic linq expression</PackageTags>
     <PackageReleaseNotes>Add MIT License</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <Version>1.0.1</Version>
@@ -21,6 +22,7 @@
   <ItemGroup>
     <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.3" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
